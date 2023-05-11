@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eses-wk.github.io/about/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/categories/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/contact/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/projects/1_numerai/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/projects/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/tags/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/projects/2_vc_dashboards/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/2_vc_dashboards/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
