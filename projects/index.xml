@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Eric Wong</title>
-    <link>/projects/</link>
+    <link>https://eses-wk.github.io/projects/</link>
     <description>Recent content in Projects on Eric Wong</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://eses-wk.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Numerai: Model Deployment Pipeline on Azure</title>
-      <link>/projects/1_numerai/</link>
+      <link>https://eses-wk.github.io/projects/1_numerai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/projects/1_numerai/</guid>
+      <guid>https://eses-wk.github.io/projects/1_numerai/</guid>
       <description>What is Numerai? Numerai is a quantitative hedge fund run by data scientists around the world. It holds a weekly (now daily) tournament to crowdsource machine learning models that predict the stock market. Data scientists can download the data, build models, upload predictions and stake on model performance. The models are evaluated on the live market data and the best models are rewarded. See Numerai for more details. What is this project about?</description>
     </item>
     
     <item>
       <title>Venture Investment Dashboards</title>
-      <link>/projects/2_vc_dashboards/</link>
+      <link>https://eses-wk.github.io/projects/2_vc_dashboards/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/projects/2_vc_dashboards/</guid>
+      <guid>https://eses-wk.github.io/projects/2_vc_dashboards/</guid>
       <description>What is this project about? Why does it matter? While I was working as an venture capital (VC) investment analyst, sourcing quality technology companies as potential investment targets is a recurring challenge for the team.
 Knowing that crunchbase.com provides a comprehensive database of technology companies funding rounds, yet lacks a user-friendly interface to search and compare different companies, I built a dashboard to help the team to source potential investment targets.</description>
     </item>
