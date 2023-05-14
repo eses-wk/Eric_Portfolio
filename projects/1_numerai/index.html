@@ -38,7 +38,7 @@
 <meta itemprop="name" content="Numerai: Model Deployment Pipeline on Azure">
 <meta itemprop="description" content="What is Numerai? Numerai is a quantitative hedge fund run by data scientists around the world. It holds a weekly (now daily) tournament to crowdsource machine learning models that predict the stock market. Data scientists can download the data, build models, upload predictions and stake on model performance. The models are evaluated on the live market data and the best models are rewarded. See Numerai for more details. What is this project about?">
 
-<meta itemprop="wordCount" content="224">
+<meta itemprop="wordCount" content="225">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Numerai: Model Deployment Pipeline on Azure"/>
 <meta name="twitter:description" content="What is Numerai? Numerai is a quantitative hedge fund run by data scientists around the world. It holds a weekly (now daily) tournament to crowdsource machine learning models that predict the stock market. Data scientists can download the data, build models, upload predictions and stake on model performance. The models are evaluated on the live market data and the best models are rewarded. See Numerai for more details. What is this project about?"/>
@@ -196,11 +196,11 @@ See <a href="https://numerai.fund/">Numerai</a> for more details.</li>
 </figure>
 
 Link to repo: <a href="https://github.com/eses-wk/numerai-azure-example">https://github.com/eses-wk/numerai-azure-example</a></p>
-<h2 id="detailed-deployment-pipeline">Detailed deployment pipeline:</h2>
+<h2 id="detailed-submission-pipeline">Detailed submission pipeline:</h2>
 <ul>
-<li>Train models locally, create Docker image for submission script</li>
-<li>Push Docker image to Docker Hub, or any container registry</li>
-<li>Set-up Azure Container Instance (ACI) to pull Docker image from registry</li>
+<li>Train models locally, prepare barebone submission script</li>
+<li>Build, Test &amp; Push Docker image to Docker Hub, or any container registry</li>
+<li>Set-up Azure Container Instance (ACI) by pulling Docker image from registry</li>
 <li>Set-up Azure Function to trigger ACI run upon receiving Numerai daily submission API call (via submission webhook), which automatically submit predictions to Numerai</li>
 </ul>
 <h2 id="other-numerai-tournament-experiments-done">Other Numerai tournament experiments done:</h2>
