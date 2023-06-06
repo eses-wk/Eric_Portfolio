@@ -29,11 +29,20 @@ Platform URL LinkedIn: https://www.linkedin.com/in/eric-wong-wai-ka/ GitHub: htt
     
     <item>
       <title>Numerai: Model Deployment Pipeline on Azure</title>
-      <link>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai/</link>
+      <link>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai_deploy_pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai/</guid>
+      <guid>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai_deploy_pipeline/</guid>
       <description>What is Numerai? Numerai is a quantitative hedge fund run by data scientists around the world. It holds a weekly (now daily) tournament to crowdsource machine learning models that predict the stock market. Data scientists can download the data, build models, upload predictions and stake on model performance. The models are evaluated on the live market data and the best models are rewarded. See Numerai for more details. What is this project about?</description>
+    </item>
+    
+    <item>
+      <title>Numerai: Portfolio Optimizer</title>
+      <link>https://eses-wk.github.io/Eric_Portfolio/projects/3_numerai_portfolio_opt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://eses-wk.github.io/Eric_Portfolio/projects/3_numerai_portfolio_opt/</guid>
+      <description>What is Numerai? Numerai is a quantitative hedge fund run by data scientists around the world. It holds a weekly (now daily) tournament to crowdsource machine learning models that predict the stock market. Data scientists can download the data, build models, upload predictions and stake on model performance. The models are evaluated on the live market data and the best models are rewarded. See Numerai website for more details What is this project about?</description>
     </item>
     
     <item>

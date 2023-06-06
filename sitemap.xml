@@ -14,7 +14,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai/</loc>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/1_numerai_deploy_pipeline/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://eses-wk.github.io/Eric_Portfolio/projects/3_numerai_portfolio_opt/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
