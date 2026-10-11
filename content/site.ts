@@ -31,26 +31,24 @@ export const portrait = {
   // Set `placeholder` to false once Eric's drawn portrait replaces the file.
   placeholder: true,
   src: "/images/portrait-placeholder.svg",
-  alt: "Placeholder line drawing of a person from the shoulders up. It is not a likeness of Eric Wong.",
-  width: 400,
-  height: 500,
-  caption: "A drawn portrait of Eric will go here.",
+  alt: "Placeholder hand-drawn portrait: a loose line sketch of a person from the shoulders up. It is not a likeness of Eric Wong.",
+  width: 320,
+  height: 360,
+  caption: "Placeholder for a real hand-drawn portrait",
 } as const;
 
 export const home = {
-  intro:
-    "Former investment analyst turned data scientist, building dashboards and model pipelines that help people make decisions with data.",
-  primaryCta: { href: "/projects", label: "See the work" },
-  secondaryCta: { href: "/contact", label: "Get in touch" },
-  workHeading: "Selected work",
-  workIntro:
-    "Three projects, each written up as the problem, the approach, and what came of it.",
+  eyebrow: "Data scientist",
+  intro: "Former investment analyst, turning data into practical, working tools.",
+  primaryCta: { href: "/projects", label: "View work" },
+  secondaryCta: { href: "/contact", label: "Contact" },
+  workLabel: "Selected work",
   aboutHeading: "About",
   aboutBody:
-    "I started in investment analysis and moved into data science. Day-to-day work has been in marketing analytics in the insurance industry. I enjoy solving real-world problems with data, and I am glad to talk about how machine learning and AI change the way work gets done.",
-  ctaHeading: "Open to collaboration",
-  ctaBody:
-    "If a problem looks like the work above, email is the direct line.",
+    "I started in investment analysis and moved into data science, and my day-to-day work has been in marketing analytics in the insurance industry. I build practical tools, from model pipelines to investment dashboards, and I enjoy solving real-world problems with data.",
+  ctaHeading: "Let’s talk about your data project.",
+  ctaBody: "A short note is all it takes to get started.",
+  ctaButton: "Get in touch",
 } as const;
 
 export const services = [

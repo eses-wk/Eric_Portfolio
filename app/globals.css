@@ -1,14 +1,27 @@
 @import "tailwindcss";
 
+/*
+ * Values follow the Option B mockup. Small secondary text (mockup #6b7684,
+ * #6f7a88, #7b8795, #8a96a4, #8f9aa7, #98a3b0) is darkened to `soft` and
+ * `quiet` so it clears WCAG AA 4.5:1 on the background and card surfaces.
+ */
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --color-mist: #eceff3;
-  --color-surface: #f5f7f9;
-  --color-line: #d3d9e0;
-  --color-ink: #36424e;
-  --color-slate: #55616d;
-  --color-label: #606b77;
-  --color-accent: #4d6578;
+  --font-sans: var(--font-dm-sans), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-mist: #eef1f4;
+  --color-card: #f4f6f8;
+  --color-frame: #e6ebf0;
+  --color-fill: #d9e0e8;
+  --color-line: #d6dce3;
+  --color-card-line: #d3dae2;
+  --color-frame-line: #cdd5de;
+  --color-divider: #dde2e8;
+  --color-btn-line: #8c99a8;
+  --color-heading: #4a5565;
+  --color-brand: #475262;
+  --color-text: #5b6674;
+  --color-more: #5f6c7b;
+  --color-soft: #5d6876;
+  --color-quiet: #646f7d;
 }
 
 @layer base {
@@ -19,23 +32,24 @@
 
   body {
     background: var(--color-mist);
-    color: var(--color-slate);
+    color: var(--color-text);
     font-family: var(--font-sans);
-    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    line-height: 1.65;
   }
 
   ::selection {
-    background: var(--color-line);
-    color: var(--color-ink);
+    background: var(--color-fill);
+    color: var(--color-heading);
   }
 
   :focus-visible {
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid var(--color-heading);
     outline-offset: 4px;
   }
 
   #content {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 2rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -54,12 +68,35 @@
 }
 
 @layer components {
-  .label {
-    font-size: 0.95rem;
-    font-weight: 500;
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.09em;
-    color: var(--color-label);
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-quiet);
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-quiet);
+  }
+
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  .tag {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-quiet);
   }
 
   .btn {
@@ -67,35 +104,32 @@
     min-height: 2.75rem;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-slate);
-    padding: 0.625rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    transition: background-color 150ms, color 150ms, border-color 150ms;
+    border: 1px solid var(--color-btn-line);
+    border-radius: 2px;
+    padding: 13px 28px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: var(--color-heading);
+    background: transparent;
+    transition: background-color 150ms, border-color 150ms;
   }
 
-  .btn-primary {
-    background: var(--color-slate);
-    color: var(--color-surface);
+  .btn:hover {
+    border-color: var(--color-heading);
   }
 
-  .btn-primary:hover {
-    background: var(--color-ink);
-    border-color: var(--color-ink);
+  .btn-fill {
+    background: var(--color-fill);
+    border-color: var(--color-fill);
   }
 
-  .btn-secondary {
-    border-color: var(--color-line);
-    color: var(--color-ink);
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--color-slate);
+  .btn-fill:hover {
+    background: var(--color-frame-line);
+    border-color: var(--color-frame-line);
   }
 
   .link {
-    color: var(--color-ink);
+    color: var(--color-more);
     text-decoration: underline;
     text-decoration-color: var(--color-line);
     text-decoration-thickness: 1px;
@@ -103,6 +137,7 @@
   }
 
   .link:hover {
-    text-decoration-color: var(--color-accent);
+    color: var(--color-heading);
+    text-decoration-color: var(--color-btn-line);
   }
 }

@@ -40,7 +40,7 @@ Page text lives in data files, not in the layout components.
 | Case studies | `content/projects.ts` |
 | Portrait placeholder and project images | `public/images/` |
 
-To add a project, append an object to the `projects` array. Include `slug`, `title`, `summary`, `sections` (problem, approach, outcome), and images. The homepage, work index, and case-study routes all read that array. Old Hugo paths can be listed in `legacySlugs` so a previous URL still renders the new page.
+To add a project, append an object to the `projects` array. Include `slug`, `title`, `summary`, a one-line `teaser` for the card, `tags`, `sections` (problem, approach, outcome), and images. The homepage cards, work index, and case-study routes all read that array, in array order. Old Hugo paths can be listed in `legacySlugs` so a previous URL still renders the new page.
 
 ### What Eric should fill in
 
@@ -50,6 +50,10 @@ The previous site did not name an employer, a city, rates, or availability, and 
 2. **Current role, if you want one.** The About page repeats the 2023 description (former investment analyst, data science, marketing analytics in insurance) and does not name an employer. Update `about.paragraphs` if that line is out of date.
 3. **Outcomes with real numbers.** Each case study’s Outcome section says what was actually published. If you have a tournament result, a measured Azure bill, or a sourcing outcome you are willing to stand behind, add it in that section. Do not leave a guessed figure in its place.
 4. **Drawn portrait.** The arch-framed headshot is a generic line-art placeholder (`public/images/portrait-placeholder.svg`), not a likeness, and is labeled “Placeholder illustration” on the page. Add Eric’s drawn portrait to `public/images/`, then in `content/site.ts` update `portrait.src`, `width`, `height`, `alt`, and `caption`, and set `placeholder: false`. The earlier photo is no longer used. It is still in git history as `images/Eric_portrait_1.jpg`.
+
+## Design
+
+The look follows the Option B mockup (calm neutral): DM Sans, a `#eef1f4` background, 1px lines, light-weight headings, and an arch-framed portrait. Colors are tokens at the top of `app/globals.css`. The mockup's lightest text colors (labels, captions, footer) fall below the WCAG AA contrast minimum, so `soft` and `quiet` are slightly darker than the mockup. That comment block lists the original values.
 
 ## Deploy
 

@@ -33,14 +33,17 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-mist/90 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-6 py-3 sm:px-10">
-        <Link href="/" className="text-base font-medium tracking-tight text-ink">
+    <header className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
+      <div className="flex items-center justify-between gap-4 border-b border-line py-6 md:py-10">
+        <Link
+          href="/"
+          className="text-[15px] font-medium uppercase tracking-[0.04em] text-brand"
+        >
           {site.name}
         </Link>
         <button
           type="button"
-          className="inline-flex min-h-11 items-center px-3 text-sm text-ink md:hidden"
+          className="inline-flex min-h-11 items-center px-3 text-[15px] text-brand md:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpenPath(open ? null : pathname)}
@@ -55,7 +58,7 @@ export function SiteHeader() {
         id={menuId}
         aria-label="Primary"
         hidden={!open}
-        className="border-t border-line px-5 py-3 md:hidden"
+        className="border-b border-line py-3 md:hidden"
       >
         <NavList pathname={pathname} stacked />
       </nav>
@@ -71,7 +74,7 @@ function NavList({
   stacked?: boolean;
 }) {
   return (
-    <ul className={stacked ? "grid gap-1" : "flex items-center gap-8"}>
+    <ul className={stacked ? "grid gap-1" : "flex items-center gap-9"}>
       {nav.map((item) => {
         const current = isCurrent(pathname, item.href);
         return (
@@ -79,10 +82,10 @@ function NavList({
             <Link
               href={item.href}
               aria-current={current ? "page" : undefined}
-              className={`inline-flex min-h-11 items-center text-sm ${
+              className={`inline-flex min-h-11 items-center text-[15px] ${
                 current
-                  ? "text-ink underline decoration-accent decoration-1 underline-offset-8"
-                  : "text-slate hover:text-ink"
+                  ? "text-heading underline decoration-btn-line decoration-1 underline-offset-8"
+                  : "text-quiet hover:text-heading"
               }`}
             >
               {item.label}

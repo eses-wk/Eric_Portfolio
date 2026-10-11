@@ -10,8 +10,8 @@ export function SketchPortrait({
   className?: string;
 }) {
   return (
-    <figure className={className}>
-      <div className="overflow-hidden rounded-t-full border border-line bg-surface">
+    <figure className={`w-full max-w-[340px] text-center ${className}`}>
+      <div className="aspect-[340/380] overflow-hidden rounded-[50%_50%_4px_4px/38%_38%_4px_4px] border border-frame-line bg-frame px-[30px] pt-[26px]">
         <Image
           src={asset(portrait.src)}
           alt={portrait.alt}
@@ -19,14 +19,11 @@ export function SketchPortrait({
           height={portrait.height}
           priority={priority}
           unoptimized
-          className="h-auto w-full"
+          className="block h-auto w-full"
         />
       </div>
-      <figcaption className="mt-3 text-center">
-        {portrait.placeholder ? (
-          <span className="label block">Placeholder illustration</span>
-        ) : null}
-        <span className="mt-1 block text-sm text-label">{portrait.caption}</span>
+      <figcaption className="mt-4 text-[12.5px] tracking-[0.04em] text-quiet">
+        {portrait.caption}
       </figcaption>
     </figure>
   );

@@ -62,37 +62,37 @@ export default async function ProjectPage({
   const [lead, ...rest] = project.images;
 
   return (
-    <Container className="py-20 md:py-28">
-      <p className="label">
-        <Link href="/projects" className="hover:text-ink">
+    <Container className="pt-16 pb-24 md:pt-[110px] md:pb-[120px]">
+      <p className="eyebrow">
+        <Link href="/projects" className="hover:text-heading">
           Work
         </Link>
         <span aria-hidden="true"> · </span>
         {project.kicker}
       </p>
-      <h1 className="mt-4 max-w-4xl text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
+      <h1 className="mt-4 max-w-4xl text-[44px] font-light leading-[1.1] tracking-[-0.02em] text-heading sm:text-[60px]">
         {project.title}
       </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
+      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-soft">
         {project.summary}
       </p>
 
       <dl className="mt-8 grid gap-6 border-y border-line py-6 sm:grid-cols-3">
         <div>
-          <dt className="label">Area</dt>
-          <dd className="mt-2 text-ink">{project.kicker}</dd>
+          <dt className="eyebrow">Area</dt>
+          <dd className="mt-2 text-heading">{project.kicker}</dd>
         </div>
         <div>
-          <dt className="label">Topics</dt>
-          <dd className="mt-2 text-ink">{project.tags.join(", ")}</dd>
+          <dt className="eyebrow">Topics</dt>
+          <dd className="mt-2 text-heading">{project.tags.join(", ")}</dd>
         </div>
         <div>
-          <dt className="label">Repository</dt>
+          <dt className="eyebrow">Repository</dt>
           <dd className="mt-2">
             {project.repo ? (
               <a
                 href={project.repo.href}
-                className="text-ink underline decoration-accent underline-offset-4"
+                className="text-heading underline decoration-btn-line underline-offset-4"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -100,7 +100,7 @@ export default async function ProjectPage({
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             ) : (
-              <span className="text-slate">
+              <span className="text-soft">
                 Not published with this project.
               </span>
             )}
@@ -130,10 +130,10 @@ export default async function ProjectPage({
 
       {next ? (
         <p className="mt-16 border-t border-line pt-8">
-          <span className="label">Next</span>
+          <span className="eyebrow">Next</span>
           <Link
             href={projectPath(next.slug)}
-            className="mt-3 block text-2xl font-medium tracking-tight text-ink underline decoration-line decoration-1 underline-offset-4 hover:decoration-accent"
+            className="mt-3 block text-[28px] font-light tracking-[-0.01em] text-heading underline decoration-line decoration-1 underline-offset-4 hover:decoration-btn-line"
           >
             {next.title}
           </Link>
@@ -151,18 +151,18 @@ function Section({ section }: { section: ProjectSection }) {
   const id = sectionId(section.heading);
   const ListTag = section.ordered ? "ol" : "ul";
   const listClass = section.ordered
-    ? "mt-4 list-decimal space-y-3 pl-5 text-base leading-relaxed text-slate marker:text-label"
-    : "mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-slate marker:text-label";
+    ? "mt-4 list-decimal space-y-3 pl-5 text-base leading-relaxed text-soft marker:text-quiet"
+    : "mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-soft marker:text-quiet";
 
   return (
     <section aria-labelledby={id}>
       <h2
         id={id}
-        className="text-2xl font-medium tracking-tight text-ink"
+        className="text-[28px] font-light tracking-[-0.01em] text-heading"
       >
         {section.heading}
       </h2>
-      <div className="mt-4 space-y-4 text-base leading-relaxed text-slate">
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-soft">
         {section.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

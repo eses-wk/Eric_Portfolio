@@ -19,6 +19,7 @@ export type Project = {
   title: string;
   kicker: string;
   summary: string;
+  teaser: string;
   tags: string[];
   repo?: { href: string; label: string };
   images: ProjectImage[];
@@ -27,67 +28,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "venture-investment-dashboards",
-    legacySlugs: ["2_vc_dashboards"],
-    title: "Venture investment dashboards",
-    kicker: "Venture research",
-    summary:
-      "Search and comparison tools for sourcing technology companies and reading other funds, built while I was a venture capital investment analyst.",
-    tags: ["Dashboards", "Venture capital", "Crunchbase"],
-    images: [
-      {
-        src: "/images/funding-round-dashboard.png",
-        alt: "Startup Funding Round Dashboard scatter plot of projected pre-money valuation against months since the last round, filtered to analytics companies. The chart is labeled with the period 1 January 2017 to 1 June 2020 and Crunchbase as the source.",
-        width: 1254,
-        height: 710,
-        caption:
-          "Startup Funding Round Dashboard. The published view is labeled 1 January 2017 to 1 June 2020, source Crunchbase.",
-      },
-      {
-        src: "/images/investor-search-dashboard.png",
-        alt: "Venture Investor Search bar chart comparing investors, with filters for investment stage and number of investments. The page is labeled last updated 23 March 2020.",
-        width: 1134,
-        height: 775,
-        caption:
-          "Venture Investor Search. The published view is labeled last updated 23 March 2020.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Problem",
-        paragraphs: [
-          "While I was a venture capital investment analyst, sourcing quality technology companies was a recurring challenge for the team. Crunchbase holds a broad database of funding rounds, but it was not a comfortable place to search and compare companies side by side.",
-          "Partnerships with other funds mattered as well, and there was no structured way to compare a fund’s investment focus, stage, and size when looking for the right partner in a specific domain.",
-        ],
-      },
-      {
-        heading: "Approach",
-        paragraphs: [
-          "I built a scraper with Selenium and BeautifulSoup to pull startup funding-round data from Crunchbase, then dashboards so that information could be filtered and explained.",
-          "Two views were published with the project:",
-        ],
-        bullets: [
-          "Startup Funding Round Dashboard, for deal sourcing and for founders looking at how competitors raise. The screenshot on this page is labeled as covering 1 January 2017 to 1 June 2020, with Crunchbase as the source.",
-          "Venture Investor Search, for comparing investors by stage, activity, and exits. The screenshot is labeled as last updated 23 March 2020.",
-        ],
-      },
-      {
-        heading: "Outcome",
-        paragraphs: [
-          "The dashboards were built to help the investment team source potential targets. They were also introduced to startup founders for competitive analysis and investor search.",
-          "No count of companies reviewed, meetings booked, or investments made was published. Those results are not estimated here.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "numerai-model-deployment",
     legacySlugs: ["1_numerai_deploy_pipeline", "1_numerai"],
     title: "Numerai model deployment on Azure",
     kicker: "Quantitative operations",
     summary:
       "A Docker and Azure pipeline that submits Numerai predictions when the daily window opens, aimed at a running cost under $1 a month.",
-    tags: ["Azure", "Docker", "Machine learning"],
+    teaser:
+      "An Azure pipeline that submits Numerai predictions automatically when the daily window opens.",
+    tags: ["Azure", "Deployment"],
     repo: {
       href: "https://github.com/eses-wk/numerai-azure-example",
       label: "numerai-azure-example",
@@ -151,7 +100,9 @@ export const projects: Project[] = [
     kicker: "Portfolio construction",
     summary:
       "A visual way to weight Numerai models from historical return and correlation, using mean-variance portfolio theory.",
-    tags: ["Portfolio", "Numerai", "Visualization"],
+    teaser:
+      "A visual tool for weighting Numerai models by historical return and correlation.",
+    tags: ["Optimization", "Modeling"],
     repo: {
       href: "https://github.com/eses-wk/numerai-portfolio-opt",
       label: "numerai-portfolio-opt",
@@ -192,6 +143,62 @@ export const projects: Project[] = [
         paragraphs: [
           "The published result is a simple visual tool for choosing weights from historical return and volatility, with a public repository.",
           "The chart on this page is labeled as a simulation. No live staking profit, correlation, or Sharpe ratio was published as a result, so none is claimed here.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "venture-investment-dashboards",
+    legacySlugs: ["2_vc_dashboards"],
+    title: "Venture investment dashboards",
+    kicker: "Venture research",
+    summary:
+      "Search and comparison tools for sourcing technology companies and reading other funds, built while I was a venture capital investment analyst.",
+    teaser:
+      "Dashboards for sourcing startups and comparing investors, built while working as a VC analyst.",
+    tags: ["Dashboards", "Analytics"],
+    images: [
+      {
+        src: "/images/funding-round-dashboard.png",
+        alt: "Startup Funding Round Dashboard scatter plot of projected pre-money valuation against months since the last round, filtered to analytics companies. The chart is labeled with the period 1 January 2017 to 1 June 2020 and Crunchbase as the source.",
+        width: 1254,
+        height: 710,
+        caption:
+          "Startup Funding Round Dashboard. The published view is labeled 1 January 2017 to 1 June 2020, source Crunchbase.",
+      },
+      {
+        src: "/images/investor-search-dashboard.png",
+        alt: "Venture Investor Search bar chart comparing investors, with filters for investment stage and number of investments. The page is labeled last updated 23 March 2020.",
+        width: 1134,
+        height: 775,
+        caption:
+          "Venture Investor Search. The published view is labeled last updated 23 March 2020.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Problem",
+        paragraphs: [
+          "While I was a venture capital investment analyst, sourcing quality technology companies was a recurring challenge for the team. Crunchbase holds a broad database of funding rounds, but it was not a comfortable place to search and compare companies side by side.",
+          "Partnerships with other funds mattered as well, and there was no structured way to compare a fund’s investment focus, stage, and size when looking for the right partner in a specific domain.",
+        ],
+      },
+      {
+        heading: "Approach",
+        paragraphs: [
+          "I built a scraper with Selenium and BeautifulSoup to pull startup funding-round data from Crunchbase, then dashboards so that information could be filtered and explained.",
+          "Two views were published with the project:",
+        ],
+        bullets: [
+          "Startup Funding Round Dashboard, for deal sourcing and for founders looking at how competitors raise. The screenshot on this page is labeled as covering 1 January 2017 to 1 June 2020, with Crunchbase as the source.",
+          "Venture Investor Search, for comparing investors by stage, activity, and exits. The screenshot is labeled as last updated 23 March 2020.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "The dashboards were built to help the investment team source potential targets. They were also introduced to startup founders for competitive analysis and investor search.",
+          "No count of companies reviewed, meetings booked, or investments made was published. Those results are not estimated here.",
         ],
       },
     ],

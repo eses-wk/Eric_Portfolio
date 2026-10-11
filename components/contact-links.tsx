@@ -33,8 +33,8 @@ export function ContactLinks() {
               ? { target: "_blank", rel: "me noopener noreferrer" }
               : {})}
           >
-            <span className="label">{link.label}</span>
-            <span className="text-xl text-ink underline decoration-line decoration-1 underline-offset-4 group-hover:decoration-accent sm:text-2xl">
+            <span className="eyebrow">{link.label}</span>
+            <span className="text-xl text-heading underline decoration-line decoration-1 underline-offset-4 group-hover:decoration-btn-line sm:text-2xl">
               {link.value}
               {link.external ? (
                 <span className="sr-only"> (opens in a new tab)</span>

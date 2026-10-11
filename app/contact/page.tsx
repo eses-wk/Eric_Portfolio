@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Container className="py-20 md:py-28">
-      <p className="label">Contact</p>
-      <h1 className="mt-4 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
+    <Container className="pt-16 pb-24 md:pt-[110px] md:pb-[120px]">
+      <p className="eyebrow">Contact</p>
+      <h1 className="mt-4 max-w-3xl text-[44px] font-light leading-[1.1] tracking-[-0.02em] text-heading sm:text-[60px]">
         {contact.title}
       </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
+      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-soft">
         {contact.lede}
       </p>
       <div className="mt-10">
