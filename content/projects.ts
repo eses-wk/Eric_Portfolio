@@ -132,7 +132,7 @@ export const projects: Project[] = [
           "Dimension reduction and feature generation with UMAP (Uniform Manifold Approximation and Projection) and PCA.",
           "Feature neutralization, and feature selection with SHAP and ANOVA.",
           "XGBoost, LightGBM, CatBoost, and neural network models, with hyperparameter search by random search.",
-          "A portfolio-optimization toolkit using weighted-average return and minimum variance, marked on the previous site as still in progress. A separate optimizer is written up on its own page.",
+          "A portfolio-optimization toolkit using weighted-average return and minimum variance, still in progress when this was written. A separate optimizer is written up on its own page.",
         ],
       },
       {

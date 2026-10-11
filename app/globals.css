@@ -1,40 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-newsreader), Georgia, "Iowan Old Style", serif;
-  --color-ink: #101114;
-  --color-panel: #181a1f;
-  --color-paper: #f4f0e6;
-  --color-muted: #c9c3b6;
-  --color-faint: #a39e93;
-  --color-brass: #e0b15c;
-  --color-brass-bright: #f0cb86;
-  --color-line: #2e3038;
-  --color-caption: #3f3a32;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-mist: #eceff3;
+  --color-surface: #f5f7f9;
+  --color-line: #d3d9e0;
+  --color-ink: #36424e;
+  --color-slate: #55616d;
+  --color-label: #606b77;
+  --color-accent: #4d6578;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background: var(--color-ink);
+    background: var(--color-mist);
   }
 
   body {
-    background: var(--color-ink);
-    color: var(--color-paper);
+    background: var(--color-mist);
+    color: var(--color-slate);
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: var(--color-brass);
+    background: var(--color-line);
     color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-brass);
-    outline-offset: 3px;
+    outline: 1px solid var(--color-accent);
+    outline-offset: 4px;
   }
 
   #content {
@@ -57,40 +54,55 @@
 }
 
 @layer components {
+  .label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.09em;
+    color: var(--color-label);
+  }
+
   .btn {
     display: inline-flex;
     min-height: 2.75rem;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--color-slate);
     padding: 0.625rem 1.25rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.01em;
+    transition: background-color 150ms, color 150ms, border-color 150ms;
   }
 
   .btn-primary {
-    background: var(--color-brass);
-    color: var(--color-ink);
+    background: var(--color-slate);
+    color: var(--color-surface);
   }
 
   .btn-primary:hover {
-    background: var(--color-brass-bright);
+    background: var(--color-ink);
+    border-color: var(--color-ink);
   }
 
   .btn-secondary {
-    border: 1px solid color-mix(in srgb, var(--color-paper) 38%, transparent);
-    color: var(--color-paper);
+    border-color: var(--color-line);
+    color: var(--color-ink);
   }
 
   .btn-secondary:hover {
-    border-color: var(--color-paper);
+    border-color: var(--color-slate);
   }
 
-  .eyebrow {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--color-faint);
+  .link {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .link:hover {
+    text-decoration-color: var(--color-accent);
   }
 }

@@ -17,40 +17,40 @@ export function ProjectList({
         return (
           <article
             key={project.slug}
-            className="relative grid gap-6 py-10 md:grid-cols-12 md:gap-10 md:py-14"
+            className="group relative grid gap-8 py-12 md:grid-cols-12 md:gap-12 md:py-16"
           >
-            {image ? (
-              <div className="md:col-span-5">
-                <ProjectFigure image={image} sizes="(min-width: 768px) 40vw, 100vw" />
-              </div>
-            ) : null}
-            <div className="md:col-span-7">
-              <p className="eyebrow">
+            <div className="md:col-span-6">
+              <p className="label">
                 {String(index + 1).padStart(2, "0")} · {project.kicker}
               </p>
-              <Title className="mt-3 font-serif text-3xl leading-tight text-paper sm:text-4xl">
-                <Link
-                  href={href}
-                  className="after:absolute after:inset-0 focus-visible:outline"
-                >
+              <Title className="mt-3 text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
+                <Link href={href} className="after:absolute after:inset-0">
                   {project.title}
                 </Link>
               </Title>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
+              <p className="mt-4 max-w-md text-base leading-relaxed text-slate">
                 {project.summary}
               </p>
-              <ul className="mt-5 flex flex-wrap gap-2" aria-label="Topics">
+              <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-1" aria-label="Topics">
                 {project.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="border border-line px-2.5 py-1 text-xs tracking-wide text-faint uppercase"
-                  >
+                  <li key={tag} className="label">
                     {tag}
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-brass">Read the case study</p>
+              <p className="mt-6 text-sm text-ink underline decoration-line underline-offset-4 group-hover:decoration-accent">
+                Read the case study
+              </p>
             </div>
+            {image ? (
+              <div className="md:col-span-6">
+                <ProjectFigure
+                  image={image}
+                  showCaption={false}
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                />
+              </div>
+            ) : null}
           </article>
         );
       })}

@@ -28,13 +28,13 @@ export function ContactLinks() {
         <li key={link.label}>
           <a
             href={link.href}
-            className="group grid gap-1 py-5 sm:grid-cols-[8rem_1fr] sm:items-baseline sm:gap-6"
+            className="group grid gap-1 py-6 sm:grid-cols-[8rem_1fr] sm:items-baseline sm:gap-8"
             {...(link.external
               ? { target: "_blank", rel: "me noopener noreferrer" }
               : {})}
           >
-            <span className="eyebrow">{link.label}</span>
-            <span className="font-serif text-2xl text-paper underline decoration-line decoration-1 underline-offset-4 group-hover:decoration-brass sm:text-3xl">
+            <span className="label">{link.label}</span>
+            <span className="text-xl text-ink underline decoration-line decoration-1 underline-offset-4 group-hover:decoration-accent sm:text-2xl">
               {link.value}
               {link.external ? (
                 <span className="sr-only"> (opens in a new tab)</span>

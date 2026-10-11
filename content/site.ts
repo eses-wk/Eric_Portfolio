@@ -28,46 +28,29 @@ export const nav = [
 ] as const;
 
 export const portrait = {
-  src: "/images/eric-wong.jpg",
-  alt: "Eric Wong seated and smiling, wearing a light shirt, in front of a wall of colored squares.",
-  width: 1067,
-  height: 1266,
-  caption: "Photograph carried over from the previous version of this site.",
+  // Set `placeholder` to false once Eric's drawn portrait replaces the file.
+  placeholder: true,
+  src: "/images/portrait-placeholder.svg",
+  alt: "Placeholder line drawing of a person from the shoulders up. It is not a likeness of Eric Wong.",
+  width: 400,
+  height: 500,
+  caption: "A drawn portrait of Eric will go here.",
 } as const;
 
 export const home = {
-  eyebrow: "Eric Wong",
-  titleStart: "Data work for people",
-  titleEmphasis: "who have to choose.",
-  lede: "I am a former investment analyst turned data scientist. The projects here are the proof: sourcing dashboards for a venture team, and models that submit themselves when a short window opens.",
+  intro:
+    "Former investment analyst turned data scientist, building dashboards and model pipelines that help people make decisions with data.",
   primaryCta: { href: "/projects", label: "See the work" },
-  secondaryCta: { href: "/contact", label: "Start a conversation" },
-  audiencesHeading: "Who this work is for",
-  audiencesIntro:
-    "Three situations already show up in the projects. If yours looks like one of them, the case studies are the detail.",
-  audiences: [
-    {
-      title: "Venture and investment teams",
-      body: "Sourcing quality technology companies was a recurring challenge when I was a venture capital investment analyst. Crunchbase held the funding data. It did not give the team a straightforward way to search and compare companies, or to compare other funds by focus, stage, and size. I built dashboards for that.",
-    },
-    {
-      title: "People running quantitative models",
-      body: "Numerai’s daily window for submitting predictions is about an hour, and the opening time moves. Uploading a file by hand means watching a deadline that will not sit still. I automated that submission on Azure, with a stated cost target under one US dollar a month.",
-    },
-    {
-      title: "Collaborators who want something usable",
-      body: "I am interested in machine learning that has to meet a real process: features, a model, and a way for someone else to use the result. The previous site invited collaboration. It did not publish rates or availability.",
-    },
-  ],
+  secondaryCta: { href: "/contact", label: "Get in touch" },
   workHeading: "Selected work",
   workIntro:
-    "Rewritten from the project pages on the previous site. The substance is the same. The shape is a case study: problem, approach, and only the outcome that was actually published.",
-  servicesHeading: "What the work demonstrates",
-  servicesIntro:
-    "These are capabilities already visible in the projects. They are not a rate card.",
-  ctaHeading: "If the problem looks like this",
+    "Three projects, each written up as the problem, the approach, and what came of it.",
+  aboutHeading: "About",
+  aboutBody:
+    "I started in investment analysis and moved into data science. Day-to-day work has been in marketing analytics in the insurance industry. I enjoy solving real-world problems with data, and I am glad to talk about how machine learning and AI change the way work gets done.",
+  ctaHeading: "Open to collaboration",
   ctaBody:
-    "The previous site said to reach out if you want to collaborate. That still stands. Email is the direct line.",
+    "If a problem looks like the work above, email is the direct line.",
 } as const;
 
 export const services = [
@@ -88,7 +71,7 @@ export const services = [
 export const about = {
   title: "Former investment analyst. Data scientist by practice.",
   paragraphs: [
-    "I believe in using data to make a real-world impact. The previous version of this site described a specific path: investment analysis first, then data science, with day-to-day work in marketing analytics in the insurance industry. No employer was named there, so none is named here.",
+    "I started in investment analysis and moved into data science. Day-to-day work has been in marketing analytics in the insurance industry. I believe in using data to make a real-world impact.",
     "I am glad to talk about how machine learning and AI change the way work gets done.",
   ],
   aside:
@@ -106,10 +89,10 @@ export const engagement = {
 
 export const contact = {
   title: "Contact",
-  lede: "Email is the direct line. LinkedIn and GitHub are the same accounts published on the previous site.",
+  lede: "Email is the direct line. I am also on LinkedIn and GitHub.",
 } as const;
 
 export const projectsPage = {
   title: "Selected work",
-  lede: "Three projects from the previous site, rewritten as case studies. Each one keeps the original substance. Where a number was never published, it is not invented here.",
+  lede: "Three projects, each written up as the problem, the approach, and what came of it. Where a result was never measured or published, the case study says so.",
 } as const;

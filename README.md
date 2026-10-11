@@ -38,7 +38,7 @@ Page text lives in data files, not in the layout components.
 | --- | --- |
 | Name, email, LinkedIn, GitHub, homepage and about copy | `content/site.ts` |
 | Case studies | `content/projects.ts` |
-| Portrait and project images | `public/images/` |
+| Portrait placeholder and project images | `public/images/` |
 
 To add a project, append an object to the `projects` array. Include `slug`, `title`, `summary`, `sections` (problem, approach, outcome), and images. The homepage, work index, and case-study routes all read that array. Old Hugo paths can be listed in `legacySlugs` so a previous URL still renders the new page.
 
@@ -49,7 +49,7 @@ The previous site did not name an employer, a city, rates, or availability, and 
 1. **How you take on work.** In `content/site.ts`, replace the `engagement` block. It is rendered on the About page with a visible “Draft — replace this” label. Say whether you take paid client work, advising, or collaboration only, and how a first conversation should start.
 2. **Current role, if you want one.** The About page repeats the 2023 description (former investment analyst, data science, marketing analytics in insurance) and does not name an employer. Update `about.paragraphs` if that line is out of date.
 3. **Outcomes with real numbers.** Each case study’s Outcome section says what was actually published. If you have a tournament result, a measured Azure bill, or a sourcing outcome you are willing to stand behind, add it in that section. Do not leave a guessed figure in its place.
-4. **Portrait.** `public/images/eric-wong.jpg` is the photo from the previous site. Replace the file, and the `portrait` alt text in `content/site.ts`, if you want a newer one.
+4. **Drawn portrait.** The arch-framed headshot is a generic line-art placeholder (`public/images/portrait-placeholder.svg`), not a likeness, and is labeled “Placeholder illustration” on the page. Add Eric’s drawn portrait to `public/images/`, then in `content/site.ts` update `portrait.src`, `width`, `height`, `alt`, and `caption`, and set `placeholder: false`. The earlier photo is no longer used. It is still in git history as `images/Eric_portrait_1.jpg`.
 
 ## Deploy
 

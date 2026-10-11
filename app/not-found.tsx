@@ -3,12 +3,12 @@ import { Container } from "@/components/container";
 
 export default function NotFound() {
   return (
-    <Container className="py-20 md:py-28">
-      <p className="eyebrow">404</p>
-      <h1 className="mt-4 max-w-3xl font-serif text-4xl text-paper sm:text-6xl">
+    <Container className="py-24 md:py-32">
+      <p className="label">404</p>
+      <h1 className="mt-4 max-w-3xl text-4xl font-medium tracking-tight text-ink sm:text-5xl">
         This page is not on the site.
       </h1>
-      <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+      <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
         The address may be left over from an older page, or it may simply be a
         typo.
       </p>

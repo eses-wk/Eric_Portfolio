@@ -62,37 +62,37 @@ export default async function ProjectPage({
   const [lead, ...rest] = project.images;
 
   return (
-    <Container className="py-14 md:py-20">
-      <p className="eyebrow">
-        <Link href="/projects" className="hover:text-paper">
+    <Container className="py-20 md:py-28">
+      <p className="label">
+        <Link href="/projects" className="hover:text-ink">
           Work
         </Link>
         <span aria-hidden="true"> · </span>
         {project.kicker}
       </p>
-      <h1 className="mt-4 max-w-4xl font-serif text-4xl leading-tight text-paper sm:text-6xl">
+      <h1 className="mt-4 max-w-4xl text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
         {project.title}
       </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
         {project.summary}
       </p>
 
       <dl className="mt-8 grid gap-6 border-y border-line py-6 sm:grid-cols-3">
         <div>
-          <dt className="eyebrow">Area</dt>
-          <dd className="mt-2 text-paper">{project.kicker}</dd>
+          <dt className="label">Area</dt>
+          <dd className="mt-2 text-ink">{project.kicker}</dd>
         </div>
         <div>
-          <dt className="eyebrow">Topics</dt>
-          <dd className="mt-2 text-paper">{project.tags.join(", ")}</dd>
+          <dt className="label">Topics</dt>
+          <dd className="mt-2 text-ink">{project.tags.join(", ")}</dd>
         </div>
         <div>
-          <dt className="eyebrow">Repository</dt>
+          <dt className="label">Repository</dt>
           <dd className="mt-2">
             {project.repo ? (
               <a
                 href={project.repo.href}
-                className="text-paper underline decoration-brass underline-offset-4"
+                className="text-ink underline decoration-accent underline-offset-4"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -100,7 +100,7 @@ export default async function ProjectPage({
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             ) : (
-              <span className="text-muted">
+              <span className="text-slate">
                 Not published with this project.
               </span>
             )}
@@ -109,12 +109,12 @@ export default async function ProjectPage({
       </dl>
 
       {lead ? (
-        <div className="mt-10">
+        <div className="mt-12">
           <ProjectFigure image={lead} priority />
         </div>
       ) : null}
 
-      <div className="mt-12 max-w-3xl space-y-12">
+      <div className="mt-16 max-w-2xl space-y-14">
         {project.sections.map((section) => (
           <Section key={section.heading} section={section} />
         ))}
@@ -130,10 +130,10 @@ export default async function ProjectPage({
 
       {next ? (
         <p className="mt-16 border-t border-line pt-8">
-          <span className="eyebrow">Next</span>
+          <span className="label">Next</span>
           <Link
             href={projectPath(next.slug)}
-            className="mt-3 block font-serif text-3xl text-paper underline decoration-line underline-offset-4 hover:decoration-brass"
+            className="mt-3 block text-2xl font-medium tracking-tight text-ink underline decoration-line decoration-1 underline-offset-4 hover:decoration-accent"
           >
             {next.title}
           </Link>
@@ -151,18 +151,18 @@ function Section({ section }: { section: ProjectSection }) {
   const id = sectionId(section.heading);
   const ListTag = section.ordered ? "ol" : "ul";
   const listClass = section.ordered
-    ? "mt-4 list-decimal space-y-3 pl-5 text-base leading-relaxed text-muted marker:text-brass"
-    : "mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-muted marker:text-brass";
+    ? "mt-4 list-decimal space-y-3 pl-5 text-base leading-relaxed text-slate marker:text-label"
+    : "mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-slate marker:text-label";
 
   return (
     <section aria-labelledby={id}>
       <h2
         id={id}
-        className="font-serif text-3xl text-paper"
+        className="text-2xl font-medium tracking-tight text-ink"
       >
         {section.heading}
       </h2>
-      <div className="mt-4 space-y-4 text-base leading-relaxed text-muted">
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-slate">
         {section.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}

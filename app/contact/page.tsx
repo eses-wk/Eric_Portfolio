@@ -5,18 +5,18 @@ import { contact, site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact Eric Wong by email at ${site.email}, or via the LinkedIn and GitHub profiles published on the previous site.`,
+  description: `Contact Eric Wong by email at ${site.email}, or on LinkedIn and GitHub.`,
   alternates: { canonical: `${site.url}/contact/` },
 };
 
 export default function ContactPage() {
   return (
-    <Container className="py-14 md:py-20">
-      <p className="eyebrow">Contact</p>
-      <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-paper sm:text-6xl">
+    <Container className="py-20 md:py-28">
+      <p className="label">Contact</p>
+      <h1 className="mt-4 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
         {contact.title}
       </h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate">
         {contact.lede}
       </p>
       <div className="mt-10">

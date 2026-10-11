@@ -33,17 +33,14 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-ink/90 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <Link
-          href="/"
-          className="font-serif text-xl tracking-tight text-paper"
-        >
+    <header className="sticky top-0 z-40 border-b border-line bg-mist/90 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-6 py-3 sm:px-10">
+        <Link href="/" className="text-base font-medium tracking-tight text-ink">
           {site.name}
         </Link>
         <button
           type="button"
-          className="inline-flex min-h-11 items-center px-3 text-sm text-paper md:hidden"
+          className="inline-flex min-h-11 items-center px-3 text-sm text-ink md:hidden"
           aria-expanded={open}
           aria-controls={menuId}
           onClick={() => setOpenPath(open ? null : pathname)}
@@ -74,7 +71,7 @@ function NavList({
   stacked?: boolean;
 }) {
   return (
-    <ul className={stacked ? "grid gap-1" : "flex items-center gap-6"}>
+    <ul className={stacked ? "grid gap-1" : "flex items-center gap-8"}>
       {nav.map((item) => {
         const current = isCurrent(pathname, item.href);
         return (
@@ -84,8 +81,8 @@ function NavList({
               aria-current={current ? "page" : undefined}
               className={`inline-flex min-h-11 items-center text-sm ${
                 current
-                  ? "text-paper underline decoration-brass decoration-2 underline-offset-8"
-                  : "text-muted hover:text-paper"
+                  ? "text-ink underline decoration-accent decoration-1 underline-offset-8"
+                  : "text-slate hover:text-ink"
               }`}
             >
               {item.label}
